@@ -1,0 +1,26 @@
+doctype html
+html
+    head 
+        link(rel="stylesheet", href="/static/main.css")
+        title= title 
+    body
+      header 
+        h1 SMARTRASH
+        img(src="/static/logo.jpeg")
+        h2= MainTitle
+
+      div.container-card
+        form(name="login" action="/home" method="post")
+          label(for="username") Username
+          input(type="text" name="username" required)
+
+          label(for="password") Contraseña
+          input(type="password" name="password" required)
+
+          .input-button
+            input(type="submit" name="accept")  
+
+          message= message
+    
+    include ./includes/footer
+           
